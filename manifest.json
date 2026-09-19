@@ -1,0 +1,24 @@
+{
+  "name": "THE TECH HUB",
+  "short_name": "THE TECH HUB",
+  "description": "THE TECH HUB \u2014 Digital Products",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#060912",
+  "theme_color": "#060912",
+  "icons": [
+    {
+      "src": "logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
