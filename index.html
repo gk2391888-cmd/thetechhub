@@ -3,1294 +3,913 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>THE TECH HUB | Websites, Apps & Software</title>
-<meta name="description" content="THE TECH HUB builds business websites, Android apps, e-commerce websites, web applications and custom software. Based in Patna, Bihar.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>THE TECH HUB | Digital Solutions</title>
+<meta name="description" content="THE TECH HUB builds websites, Android apps, e-commerce websites and custom software in Patna, Bihar.">
 <meta name="theme-color" content="#060912">
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 <link rel="icon" type="image/png" href="logo-192.png">
 <link rel="apple-touch-icon" href="logo-192.png">
 <link rel="manifest" href="manifest.json">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="THE TECH HUB">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 :root{
   --red:#ff0033;
   --bg:#060912;
-  --card:#101427;
-  --muted:#a7adbd;
+  --panel:#101427;
+  --muted:#9ba3b5;
   --line:#ffffff12;
 }
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:80px;
+html,body{
+  width:100%;
+  min-height:100%;
+  overflow-x:hidden;
 }
-
+html{scroll-behavior:smooth}
 body{
   background:var(--bg);
   color:#fff;
   font-family:'Space Grotesk',sans-serif;
-  overflow-x:hidden;
-  width:100%;
+  -webkit-text-size-adjust:100%;
 }
-
-a{color:inherit}
-img{max-width:100%}
-
-/* NAVIGATION */
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  padding:14px 6%;
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.topbar{
+  height:70px;
   position:fixed;
-  top:0;
-  left:0;
-  width:100%;
   z-index:100;
-  background:rgba(6,9,18,.9);
-  backdrop-filter:blur(20px);
+  top:0;left:0;right:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  background:rgba(6,9,18,.94);
+  backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
-
-.nav-logo{
+.brand{
   display:flex;
-  align-items:center;
-  gap:10px;
-  font-family:'Syne',sans-serif;
-  font-weight:800;
-  font-size:20px;
-  letter-spacing:-.5px;
-  white-space:nowrap;
-  flex-shrink:0;
-  text-decoration:none;
-}
-
-.nav-logo img{
-  width:36px;
-  height:36px;
-  object-fit:contain;
-}
-
-.nav-logo span{color:var(--red)}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:26px;
-  font-size:13px;
-}
-
-.nav-links a{
-  text-decoration:none;
-  color:#c5c9d4;
-  transition:.25s;
-}
-
-.nav-links a:hover{color:#fff}
-
-.nav-cta{
-  background:var(--red);
-  color:#fff!important;
-  padding:11px 17px;
-  border-radius:10px;
-  font-weight:700;
-}
-
-/* HERO */
-
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  padding:140px 6% 80px;
-  position:relative;
-  background:
-    radial-gradient(800px at 20% 10%,#ff003322 0%,transparent 50%),
-    radial-gradient(600px at 90% 90%,#7000ff22 0%,transparent 50%);
-}
-
-.hero-inner{
-  max-width:1100px;
-  width:100%;
-  margin:auto;
-}
-
-.hero-tag{
-  border:1px solid #ffffff1a;
-  padding:8px 15px;
-  border-radius:100px;
-  font-size:11px;
-  letter-spacing:1.5px;
-  display:inline-flex;
   align-items:center;
   gap:9px;
-  background:#ffffff08;
-  color:#d8dbe5;
-}
-
-.hero-tag i{
-  color:#20d997;
-  font-size:8px;
-}
-
-.h1{
   font-family:'Syne',sans-serif;
-  font-size:clamp(44px,7.2vw,88px);
-  line-height:.98;
+  font-size:19px;
   font-weight:800;
-  letter-spacing:-4px;
-  margin-top:25px;
+  white-space:nowrap;
 }
-
-.h1 span{color:var(--red)}
-
-.hero-p{
-  max-width:620px;
-  margin-top:25px;
-  color:#a7adbd;
-  line-height:1.85;
-  font-size:16px;
+.brand img{width:34px;height:34px;object-fit:contain}
+.brand span{color:var(--red)}
+.desktop-nav{display:flex;align-items:center;gap:27px}
+.nav-link{
+  color:#b8bfce;
+  font-size:13px;
+  font-weight:600;
+  transition:.2s;
 }
-
-.btns{
-  margin-top:32px;
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
+.nav-link:hover,.nav-link.active{color:#fff}
+.nav-link.active:after{
+  content:"";
+  display:block;
+  height:2px;
+  background:var(--red);
+  margin-top:5px;
+  border-radius:3px;
 }
-
-.btn-primary,.btn-sec{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:15px 22px;
-  border-radius:12px;
-  font-weight:700;
-  text-decoration:none;
-  font-size:14px;
-  transition:.25s;
-}
-
-.btn-primary{
-  background:#fff;
-  color:#080912;
-}
-
-.btn-primary:hover{
-  transform:translateY(-3px);
-  background:#f1f1f1;
-}
-
-.btn-sec{
-  border:1px solid #ffffff24;
+.top-contact{
+  background:var(--red);
   color:#fff;
-  background:#ffffff08;
-}
-
-.btn-sec:hover{
-  background:#ffffff15;
-  transform:translateY(-3px);
-}
-
-.btn-whatsapp{
-  background:#13b96b;
-  color:#fff;
-}
-
-.btn-whatsapp:hover{
-  background:#0da85f;
-  transform:translateY(-3px);
-}
-
-.hero-note{
-  margin-top:25px;
-  color:#777f92;
+  padding:11px 16px;
+  border-radius:10px;
   font-size:12px;
+  font-weight:700;
 }
-
-/* COMMON SECTIONS */
-
-section{position:relative}
-
-.section-wrap{
-  max-width:1100px;
-  margin:auto;
+main{
+  padding-top:70px;
+  padding-bottom:0;
+  min-height:100vh;
 }
-
-.section-heading{text-align:center}
-
+.page{
+  display:none;
+  min-height:calc(100vh - 70px);
+  animation:pageIn .22s ease;
+}
+.page.active{display:block}
+@keyframes pageIn{
+  from{opacity:.5;transform:translateY(5px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.wrap{width:88%;max-width:1100px;margin:auto}
+.page-head{
+  padding:62px 0 30px;
+  text-align:center;
+}
 .eyebrow{
   color:var(--red);
   font-size:11px;
   font-weight:700;
   letter-spacing:2.5px;
-  text-transform:uppercase;
 }
-
-.sec-title{
+.page-title{
   font-family:'Syne',sans-serif;
-  font-size:clamp(30px,4vw,46px);
-  text-align:center;
+  font-size:clamp(34px,5vw,55px);
+  line-height:1.08;
+  letter-spacing:-1.8px;
   margin-top:12px;
-  letter-spacing:-1.5px;
 }
-
-.sec-desc{
-  color:#9299aa;
-  text-align:center;
-  margin:12px auto 0;
-  max-width:600px;
+.page-subtitle{
+  color:var(--muted);
   font-size:14px;
   line-height:1.8;
+  max-width:650px;
+  margin:14px auto 0;
 }
 
-/* SERVICES */
-
-.services{
-  padding:100px 6%;
-  background:#080b17;
-}
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:48px;
-}
-
-.service-card{
-  padding:27px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:linear-gradient(145deg,#111629,#0c1020);
-  transition:.3s;
-}
-
-.service-card:hover{
-  transform:translateY(-5px);
-  border-color:#ff003355;
-  background:#13182b;
-}
-
-.service-icon{
-  width:49px;
-  height:49px;
-  display:grid;
-  place-items:center;
-  border-radius:14px;
-  color:#ff3157;
-  background:#ff003315;
-  border:1px solid #ff00332b;
-  font-size:19px;
-}
-
-.service-card h3{
-  font-family:'Syne',sans-serif;
-  font-size:18px;
-  margin-top:20px;
-  line-height:1.4;
-}
-
-.service-card p{
-  color:#9299aa;
-  font-size:13px;
-  line-height:1.75;
-  margin-top:10px;
-}
-
-/* PRODUCTS */
-
-.products{
-  padding:100px 6%;
-  background:var(--bg);
-}
-
-.grid{
-  max-width:1100px;
-  margin:48px auto 0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-}
-
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:32px;
-  transition:.35s;
-  min-width:0;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  border-color:#ffffff30;
-}
-
-.product-icon{
-  width:52px;
-  height:52px;
-  border-radius:14px;
-  display:grid;
-  place-items:center;
-  font-size:21px;
-}
-
-.product-icon.blue{
-  background:#00d1ff15;
-  border:1px solid #00d1ff30;
-  color:#00d1ff;
-}
-
-.product-icon.red{
-  background:#ff003315;
-  border:1px solid #ff003330;
-  color:#ff3157;
-}
-
-.product-label{
-  display:inline-block;
-  margin-top:22px;
-  font-size:10px;
-  letter-spacing:1.5px;
-  color:#9299aa;
-  text-transform:uppercase;
-}
-
-.card h3{
-  font-family:'Syne',sans-serif;
-  font-size:25px;
-  margin-top:8px;
-}
-
-.card p{
-  color:#a0a6b6;
-  font-size:14px;
-  line-height:1.8;
-  margin-top:13px;
-}
-
-.visit{
-  margin-top:23px;
-  display:inline-flex;
-  gap:10px;
+/* HOME */
+.home-hero{
+  min-height:calc(100vh - 70px);
+  display:flex;
   align-items:center;
-  font-weight:700;
-  color:#fff;
-  text-decoration:none;
+  padding:65px 0;
+  background:
+    radial-gradient(750px at 15% 10%,#ff003322,transparent 55%),
+    radial-gradient(550px at 90% 85%,#7000ff1c,transparent 55%);
+}
+.hero-content{max-width:760px}
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:9px 14px;
+  border:1px solid #ffffff20;
+  border-radius:30px;
+  background:#ffffff08;
+  color:#d8dce6;
+  font-size:10px;
+  letter-spacing:1.3px;
+}
+.hero-badge i{color:#21d997;font-size:8px}
+.hero-title{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(48px,8vw,88px);
+  line-height:.99;
+  letter-spacing:-4px;
+  margin-top:25px;
+}
+.hero-title span{color:var(--red)}
+.hero-text{
+  max-width:610px;
+  color:#a8afbf;
+  font-size:15px;
+  line-height:1.9;
+  margin-top:23px;
+}
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:47px;
+  padding:13px 19px;
+  border-radius:11px;
   font-size:13px;
-  background:#ffffff10;
-  padding:12px 16px;
-  border-radius:10px;
+  font-weight:700;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:.2s;
+}
+.btn-light{background:#fff;color:#090b12}
+.btn-outline{background:#ffffff08;border-color:#ffffff25;color:#fff}
+.btn-red{background:var(--red);color:#fff}
+.btn-green{background:#13b96b;color:#fff}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.location{
+  margin-top:25px;
+  color:#858da0;
+  font-size:12px;
+}
+
+/* SHARED CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:17px;
+  padding-bottom:65px;
+}
+.card{
+  min-width:0;
+  padding:24px;
+  background:linear-gradient(145deg,#111629,#0c1020);
+  border:1px solid var(--line);
+  border-radius:17px;
   transition:.25s;
 }
-
+.card:hover{transform:translateY(-4px);border-color:#ff00334a}
+.iconbox{
+  width:47px;height:47px;
+  display:grid;place-items:center;
+  border-radius:13px;
+  background:#ff003315;
+  border:1px solid #ff00332b;
+  color:#ff3157;
+  font-size:18px;
+}
+.card h3{
+  font-family:'Syne',sans-serif;
+  font-size:17px;
+  line-height:1.4;
+  margin-top:17px;
+}
+.card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.75;
+  margin-top:9px;
+}
+.product-card{padding:28px}
+.product-card .iconbox.blue{
+  color:#00d1ff;
+  background:#00d1ff15;
+  border-color:#00d1ff30;
+}
+.product-type{
+  color:#8e96a9;
+  font-size:10px;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  margin-top:20px;
+}
+.product-card h3{font-size:24px;margin-top:8px}
+.visit{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:11px 14px;
+  margin-top:19px;
+  border-radius:9px;
+  background:#ffffff10;
+  font-size:12px;
+  font-weight:700;
+}
 .visit:hover{background:var(--red)}
 
-/* CONTACT */
-
-.contact{
-  padding:95px 6%;
-  background:
-    radial-gradient(700px at 50% 100%,#ff00331c,transparent 65%),
-    #080b17;
+/* HOME PRODUCT PREVIEW */
+.home-products{
+  padding:55px 0 70px;
+  background:#080b17;
 }
+.home-products .cards{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  padding:30px 0 0;
+}
+.home-products .card{background:#101427}
 
-.contact-box{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-  border:1px solid #ffffff14;
-  border-radius:24px;
-  padding:55px 25px;
+/* CONTACT */
+.contact-panel{
+  max-width:760px;
+  margin:0 auto 70px;
+  padding:34px;
+  border:1px solid var(--line);
+  border-radius:20px;
   background:#ffffff05;
 }
-
-.contact-box h2{
+.contact-panel h2{
   font-family:'Syne',sans-serif;
-  font-size:clamp(30px,5vw,48px);
-  letter-spacing:-1.5px;
-  margin-top:13px;
+  font-size:25px;
+  margin-bottom:10px;
 }
-
-.contact-box p{
-  color:#a0a6b6;
-  line-height:1.8;
-  font-size:14px;
-  max-width:580px;
-  margin:15px auto 0;
-}
-
-.contact-actions{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:13px;
-  margin-top:28px;
-}
-
-.contact-details{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:25px;
-  margin-top:28px;
-  color:#9ba2b3;
+.contact-panel>p{
+  color:var(--muted);
   font-size:13px;
+  line-height:1.8;
 }
-
-.contact-details a{text-decoration:none}
-.contact-details a:hover{color:#fff}
-
-/* FOOTER */
-
-footer{
-  border-top:1px solid var(--line);
-  padding:50px 6% 25px;
-  background:#050712;
+.contact-list{
+  display:grid;
+  gap:12px;
+  margin-top:25px;
 }
-
-.footer-main{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:35px;
-  max-width:1100px;
-  margin:0 auto;
-}
-
-.footer-brand{
+.contact-item{
   display:flex;
   align-items:center;
-  gap:11px;
-  font-family:'Syne',sans-serif;
-  font-size:20px;
-  font-weight:800;
-}
-
-.footer-brand img{
-  width:34px;
-  height:34px;
-  object-fit:contain;
-}
-
-.footer-brand span{color:var(--red)}
-
-.footer-about{
-  margin-top:13px;
-  color:#858c9e;
-  line-height:1.8;
-  max-width:380px;
-  font-size:13px;
-}
-
-.socials{
-  display:flex;
-  gap:12px;
-  margin-top:22px;
-}
-
-.socials a{
-  width:42px;
-  height:42px;
-  background:#ffffff08;
-  border:1px solid #ffffff15;
+  gap:13px;
+  padding:15px;
   border-radius:12px;
-  display:grid;
-  place-items:center;
-  color:#fff;
-  text-decoration:none;
-  transition:.3s;
+  border:1px solid var(--line);
+  background:#ffffff05;
+  overflow-wrap:anywhere;
 }
-
-.socials a:hover{
-  background:#fff;
-  color:#000;
-  transform:translateY(-2px);
-}
-
-.footer-links{
-  font-size:13px;
-  line-height:2.5;
-  color:#a1a7b7;
-}
-
-.footer-links a{text-decoration:none}
-.footer-links a:hover{color:#fff}
-
-.footer-heading{
-  color:#fff;
-  opacity:.45;
-  letter-spacing:2px;
-  font-size:11px;
-  margin-bottom:8px;
-}
-
-.footer-bottom{
+.contact-item i{
+  width:22px;
   text-align:center;
-  margin:45px auto 0;
-  padding-top:25px;
-  border-top:1px solid #ffffff0a;
-  color:#858c9e;
-  font-size:11px;
-  letter-spacing:.4px;
+  color:var(--red);
+}
+.contact-item small{
+  display:block;
+  color:#8991a4;
+  font-size:10px;
+  margin-bottom:3px;
+}
+.contact-item strong{
+  font-size:13px;
+  font-weight:600;
+}
+.contact-panel .actions{margin-top:23px}
+
+/* FOOTER */
+footer{
+  border-top:1px solid var(--line);
+  background:#050712;
+  padding:35px 6% 20px;
+}
+.footer-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+.footer-about{
+  max-width:390px;
+  color:#8e96a8;
+  font-size:12px;
+  line-height:1.8;
+  margin-top:11px;
+}
+.socials{display:flex;gap:9px;margin-top:17px}
+.socials a{
+  width:38px;height:38px;
+  display:grid;place-items:center;
+  border:1px solid #ffffff18;
+  border-radius:10px;
+  background:#ffffff08;
+}
+.socials a:hover{background:#fff;color:#000}
+.footer-links{font-size:12px;line-height:2.5;color:#a3aabb}
+.footer-links h4{
+  color:#fff;
+  opacity:.5;
+  font-size:10px;
+  letter-spacing:1.7px;
+  margin-bottom:7px;
+}
+.footer-links a:hover{color:#fff}
+.legal{
+  max-width:1100px;
+  margin:30px auto 0;
+  padding-top:19px;
+  border-top:1px solid #ffffff0d;
+  text-align:center;
+  color:#7f8799;
+  font-size:10px;
   line-height:2;
 }
+.legal strong{color:#fff}
+.legal .red{color:var(--red)}
 
-.footer-bottom strong{color:#fff}
-.footer-bottom .red{color:var(--red)}
+/* MOBILE BOTTOM NAV */
+.mobile-nav{display:none}
 
 /* TABLET */
-
 @media(max-width:900px){
-  .nav-links{gap:15px}
-  .nav-links a{font-size:12px}
-  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .desktop-nav{gap:16px}
+  .wrap{width:90%}
 }
 
-/* MOBILE */
-
+/* PHONE */
 @media(max-width:650px){
-
-  html{
-    scroll-padding-top:68px;
+  html,body{width:100%;overflow-x:hidden}
+  .topbar{
+    height:60px;
+    padding:0 4%;
   }
+  .brand{font-size:15px;gap:7px}
+  .brand img{width:29px;height:29px}
+  .desktop-nav{display:none}
+  main{padding-top:60px;padding-bottom:72px}
+  .page{min-height:calc(100vh - 132px)}
+  .wrap{width:90%}
 
-  body{
-    width:100%;
-    overflow-x:hidden;
+  .home-hero{
+    min-height:calc(83vh - 60px);
+    padding:48px 0 55px;
   }
-
-  /* MOBILE NAV */
-
-  nav{
-    height:62px;
-    padding:9px 4%;
-    gap:8px;
-  }
-
-  .nav-logo{
-    font-size:15px;
-    gap:6px;
-    letter-spacing:-.4px;
-  }
-
-  .nav-logo img{
-    width:29px;
-    height:29px;
-  }
-
-  .nav-links{
-    gap:0;
-    flex-shrink:0;
-  }
-
-  .nav-links a:not(.nav-cta){
-    display:none;
-  }
-
-  .nav-links .nav-cta{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    padding:10px 12px;
-    border-radius:9px;
-    font-size:11px;
-    white-space:nowrap;
-  }
-
-  /* MOBILE HERO */
-
-  .hero{
-    min-height:auto;
-    padding:120px 5% 62px;
-    text-align:left;
-    justify-content:flex-start;
-  }
-
-  .hero-inner{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .hero-tag{
-    font-size:9px;
-    padding:8px 11px;
-    letter-spacing:.7px;
-    line-height:1.5;
+  .hero-content{width:100%}
+  .hero-badge{
+    font-size:8px;
+    letter-spacing:.8px;
+    padding:8px 10px;
     max-width:100%;
   }
-
-  .h1{
-    font-size:clamp(42px,11.8vw,58px);
+  .hero-title{
+    font-size:clamp(43px,12vw,59px);
     line-height:1.04;
-    letter-spacing:-2.4px;
-    margin-top:23px;
-    overflow-wrap:anywhere;
-  }
-
-  .hero-p{
-    font-size:14px;
-    line-height:1.75;
-    margin-top:18px;
-    max-width:100%;
-  }
-
-  .btns{
-    width:100%;
-    display:grid;
-    grid-template-columns:1fr;
-    gap:11px;
-    margin-top:25px;
-  }
-
-  .btn-primary,.btn-sec{
-    width:100%;
-    min-height:48px;
-    padding:13px 15px;
-    font-size:13px;
-    border-radius:11px;
-  }
-
-  .hero-note{
-    margin-top:20px;
-    font-size:12px;
-  }
-
-  /* MOBILE SECTION SPACING */
-
-  .services,.products,.contact{
-    padding:65px 5%;
-  }
-
-  .eyebrow{
-    font-size:10px;
-    letter-spacing:2px;
-  }
-
-  .sec-title{
-    font-size:31px;
-    line-height:1.15;
-    letter-spacing:-1px;
-    margin-top:10px;
-  }
-
-  .sec-desc{
-    font-size:13px;
-    line-height:1.7;
-    margin-top:11px;
-  }
-
-  /* MOBILE SERVICES */
-
-  .services-grid{
-    grid-template-columns:1fr;
-    gap:13px;
-    margin-top:30px;
-  }
-
-  .service-card{
-    padding:21px;
-    border-radius:15px;
-  }
-
-  .service-icon{
-    width:43px;
-    height:43px;
-    border-radius:12px;
-    font-size:17px;
-  }
-
-  .service-card h3{
-    font-size:17px;
-    margin-top:15px;
-    line-height:1.35;
-  }
-
-  .service-card p{
-    font-size:13px;
-    line-height:1.7;
-    margin-top:8px;
-  }
-
-  /* MOBILE PRODUCTS */
-
-  .grid{
-    grid-template-columns:1fr;
-    gap:15px;
-    margin-top:30px;
-  }
-
-  .card{
-    padding:23px;
-    border-radius:16px;
-  }
-
-  .product-icon{
-    width:47px;
-    height:47px;
-    font-size:19px;
-  }
-
-  .product-label{
-    margin-top:18px;
-    font-size:9px;
-  }
-
-  .card h3{
-    font-size:22px;
-    line-height:1.25;
-    overflow-wrap:anywhere;
-  }
-
-  .card p{
-    font-size:13px;
-    line-height:1.75;
-    margin-top:10px;
-  }
-
-  .visit{
-    min-height:43px;
-    margin-top:18px;
-    padding:11px 14px;
-    font-size:12px;
-  }
-
-  /* MOBILE CONTACT */
-
-  .contact-box{
-    padding:34px 19px;
-    border-radius:18px;
-  }
-
-  .contact-box h2{
-    font-size:32px;
-    line-height:1.12;
-    letter-spacing:-1px;
-    margin-top:12px;
-  }
-
-  .contact-box p{
-    font-size:13px;
-    line-height:1.75;
-    margin-top:13px;
-  }
-
-  .contact-actions{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:10px;
+    letter-spacing:-2.5px;
     margin-top:23px;
   }
-
-  .contact-actions a{
-    width:100%;
-    min-height:47px;
-  }
-
-  .contact-details{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:12px;
-    margin-top:22px;
-    font-size:11px;
-    overflow-wrap:anywhere;
-  }
-
-  /* MOBILE FOOTER */
-
-  footer{
-    padding:37px 5% 20px;
-  }
-
-  .footer-main{
-    display:flex;
-    flex-direction:column;
-    gap:28px;
-  }
-
-  .footer-brand{
-    font-size:18px;
-    gap:8px;
-  }
-
-  .footer-brand img{
-    width:30px;
-    height:30px;
-  }
-
-  .footer-about{
-    font-size:12px;
-    line-height:1.75;
-    max-width:100%;
-  }
-
-  .socials{
-    gap:10px;
+  .hero-text{
+    font-size:13px;
+    line-height:1.8;
     margin-top:17px;
   }
-
-  .socials a{
-    width:39px;
-    height:39px;
-    border-radius:10px;
+  .actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    margin-top:23px;
   }
+  .btn{width:100%;min-height:46px;font-size:12px}
+  .location{margin-top:18px;font-size:11px}
 
-  .footer-links{
-    font-size:12px;
-    line-height:2.3;
-    overflow-wrap:anywhere;
-  }
+  .page-head{padding:42px 0 25px}
+  .page-title{font-size:34px;letter-spacing:-1px}
+  .page-subtitle{font-size:12px;line-height:1.7;margin-top:10px}
 
-  .footer-heading{
-    font-size:10px;
-    margin-bottom:5px;
+  .cards{
+    grid-template-columns:1fr;
+    gap:12px;
+    padding-bottom:40px;
   }
+  .card{padding:21px;border-radius:15px}
+  .iconbox{width:43px;height:43px;font-size:17px}
+  .card h3{font-size:16px;margin-top:14px}
+  .card p{font-size:12px;line-height:1.7;margin-top:7px}
 
-  .footer-bottom{
-    margin-top:30px;
-    padding-top:20px;
-    font-size:10px;
-    line-height:1.9;
-    overflow-wrap:anywhere;
+  .home-products{padding:42px 0 45px}
+  .home-products .cards{
+    grid-template-columns:1fr;
+    gap:12px;
+    padding-top:23px;
   }
+  .product-card{padding:22px}
+  .product-card h3{font-size:21px}
+  .product-type{margin-top:16px}
+  .visit{font-size:11px}
+
+  .contact-panel{
+    padding:23px 17px;
+    margin-bottom:42px;
+    border-radius:16px;
+  }
+  .contact-panel h2{font-size:21px}
+  .contact-panel>p{font-size:12px}
+  .contact-item{padding:12px;gap:10px}
+  .contact-item strong{font-size:11px}
+  .contact-item small{font-size:9px}
+  .contact-panel .actions{margin-top:18px}
+
+  footer{padding:28px 5% 15px}
+  .footer-inner{flex-direction:column;gap:22px}
+  .footer-about{font-size:11px}
+  .footer-links{font-size:11px}
+  .legal{font-size:9px;margin-top:23px}
+
+  .mobile-nav{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    position:fixed;
+    z-index:200;
+    bottom:0;left:0;right:0;
+    min-height:68px;
+    padding:7px 4% calc(7px + env(safe-area-inset-bottom));
+    background:rgba(8,11,23,.97);
+    backdrop-filter:blur(18px);
+    border-top:1px solid #ffffff18;
+  }
+  .mobile-nav a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    color:#81899b;
+    font-size:9px;
+    font-weight:600;
+  }
+  .mobile-nav a i{font-size:17px}
+  .mobile-nav a.active{color:#fff}
+  .mobile-nav a.active i{color:var(--red)}
 }
 
-/* EXTRA SMALL PHONES */
-
+/* SMALL PHONES */
 @media(max-width:360px){
-
-  .nav-logo{
-    font-size:13px;
-  }
-
-  .nav-logo img{
-    width:26px;
-    height:26px;
-  }
-
-  .nav-links .nav-cta{
-    font-size:10px;
-    padding:9px 10px;
-  }
-
-  .h1{
-    font-size:40px;
-    letter-spacing:-2px;
-  }
-
-  .sec-title{
-    font-size:28px;
-  }
-
-  .card,.service-card{
-    padding:19px;
-  }
-}
-
-/* REDUCE MOTION FOR USERS WHO PREFER IT */
-
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{
-    transition:none!important;
-    animation:none!important;
-  }
+  .brand{font-size:13px}
+  .brand img{width:26px;height:26px}
+  .hero-title{font-size:41px;letter-spacing:-2px}
+  .page-title{font-size:30px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <a class="nav-logo" href="#">
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="THE TECH HUB Home">
     <img src="logo-192.png" alt="THE TECH HUB logo">
     THE TECH <span>HUB.</span>
   </a>
 
-  <div class="nav-links">
-    <a href="#services">Services</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-    <a class="nav-cta"
-       href="https://wa.me/919709461672"
-       target="_blank"
-       rel="noopener">
-      Let's Talk <i class="fa-brands fa-whatsapp"></i>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a class="nav-link" data-page="home" href="#home">Home</a>
+    <a class="nav-link" data-page="services" href="#services">Services</a>
+    <a class="nav-link" data-page="projects" href="#projects">Our Projects</a>
+    <a class="nav-link" data-page="contact" href="#contact">Contact</a>
+    <a class="top-contact" href="https://wa.me/919709461672" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Let's Talk
     </a>
-  </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME PAGE -->
+  <section class="page active" id="page-home">
+    <div class="home-hero">
+      <div class="wrap">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-circle"></i>
+            DIGITAL SOLUTIONS • BUILT IN INDIA
+          </div>
+
+          <h1 class="hero-title">
+            WE BUILD<br>
+            <span>DIGITAL</span><br>
+            EXPERIENCES.
+          </h1>
+
+          <p class="hero-text">
+            THE TECH HUB is a technology company based in Patna, Bihar.
+            We create websites, apps and custom software that help
+            businesses and communities bring their ideas to life.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-light" href="#services">
+              Explore Services <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="btn btn-outline" href="#projects">
+              <i class="fa-solid fa-layer-group"></i> Our Projects
+            </a>
+          </div>
+
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            Patna, Bihar, India
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-products">
+      <div class="wrap">
+        <div class="eyebrow" style="text-align:center">BUILT BY US</div>
+        <h2 class="page-title" style="text-align:center;font-size:30px">
+          OUR PRODUCTS
+        </h2>
+
+        <div class="cards">
+          <div class="card product-card">
+            <div class="iconbox blue">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="product-type">Learning platform</div>
+            <h3>NEXT GEN</h3>
+            <p>
+              A learning platform for IIT Madras BS students, with
+              study resources, notes, previous year questions,
+              videos and learning tools.
+            </p>
+            <a class="visit" href="https://iitm-solutions.vercel.app/" target="_blank" rel="noopener">
+              Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="card product-card">
+            <div class="iconbox">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <div class="product-type">Gaming & esports</div>
+            <h3>FF LEAGUE</h3>
+            <p>
+              A Free Fire esports platform featuring tournaments,
+              cash prizes, wallet features and a leaderboard system.
+            </p>
+            <a class="visit" href="https://gk2391888-cmd.github.io/ff-leauge-final/" target="_blank" rel="noopener">
+              Play Now <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PAGE -->
+  <section class="page" id="page-services">
+    <div class="wrap">
+      <div class="page-head">
+        <div class="eyebrow">WHAT WE DO</div>
+        <h1 class="page-title">OUR SERVICES</h1>
+        <p class="page-subtitle">
+          Digital solutions designed around your business, idea
+          and project requirements.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="iconbox"><i class="fa-solid fa-globe"></i></div>
+          <h3>Business Websites</h3>
+          <p>
+            Professional, responsive websites that introduce your
+            business, showcase your work and help customers connect.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="iconbox"><i class="fa-brands fa-android"></i></div>
+          <h3>Android Apps</h3>
+          <p>
+            Mobile app experiences designed around your users,
+            services and business requirements.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="iconbox"><i class="fa-solid fa-cart-shopping"></i></div>
+          <h3>E-commerce Websites</h3>
+          <p>
+            Online stores with product displays, shopping flows
+            and features tailored to your selling needs.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="iconbox"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Web Applications</h3>
+          <p>
+            Interactive web-based platforms built to support
+            workflows, communities and digital services.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="iconbox"><i class="fa-solid fa-table-columns"></i></div>
+          <h3>Custom Software & Dashboards</h3>
+          <p>
+            Custom tools, admin panels and dashboards to organize
+            information and manage day-to-day operations.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="iconbox"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>
+            Clean interfaces and thoughtful user journeys that
+            make digital products easier to understand and use.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="iconbox"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Other Digital Services</h3>
+          <p>
+            Have a different digital requirement? Tell us about
+            your idea and we can discuss the right approach.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS PAGE -->
+  <section class="page" id="page-projects">
+    <div class="wrap">
+      <div class="page-head">
+        <div class="eyebrow">OUR WORK</div>
+        <h1 class="page-title">OUR PROJECTS</h1>
+        <p class="page-subtitle">
+          Digital platforms created by THE TECH HUB for learning
+          and gaming communities.
+        </p>
+      </div>
+
+      <div class="cards" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+        <div class="card product-card">
+          <div class="iconbox blue">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="product-type">Learning platform</div>
+          <h3>NEXT GEN</h3>
+          <p>
+            A learning platform for IIT Madras BS students with
+            study resources, notes, previous year questions,
+            videos and learning tools.
+          </p>
+          <a class="visit" href="https://iitm-solutions.vercel.app/" target="_blank" rel="noopener">
+            Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="card product-card">
+          <div class="iconbox">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <div class="product-type">Gaming & esports</div>
+          <h3>FF LEAGUE</h3>
+          <p>
+            A Free Fire esports platform featuring tournaments,
+            cash prizes, wallet features and a leaderboard system
+            for gamers.
+          </p>
+          <a class="visit" href="https://gk2391888-cmd.github.io/ff-leauge-final/" target="_blank" rel="noopener">
+            Play Now <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:0 0 55px">
+        <p style="color:var(--muted);font-size:13px;line-height:1.8">
+          Have an idea for a project of your own?
+        </p>
+        <a class="btn btn-red" href="#contact" style="margin-top:15px">
+          Discuss Your Project <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT PAGE -->
+  <section class="page" id="page-contact">
+    <div class="wrap">
+      <div class="page-head">
+        <div class="eyebrow">GET IN TOUCH</div>
+        <h1 class="page-title">CONTACT US</h1>
+        <p class="page-subtitle">
+          Tell us what you're planning to build.
+          Let's discuss your project.
+        </p>
+      </div>
+
+      <div class="contact-panel">
+        <h2>Let's talk about your idea.</h2>
+        <p>
+          Need a website, Android app, e-commerce store or custom software?
+          Contact THE TECH HUB directly using either option below.
+        </p>
+
+        <div class="contact-list">
+          <a class="contact-item" href="https://wa.me/919709461672?text=Hi%20THE%20TECH%20HUB%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>
+              <small>WHATSAPP</small>
+              <strong>+91 97094 61672</strong>
+            </span>
+          </a>
+
+          <a class="contact-item" href="mailto:gaurav.kumar.mail1109@gmail.com?subject=Project%20Enquiry%20-%20THE%20TECH%20HUB">
+            <i class="fa-solid fa-envelope"></i>
+            <span>
+              <small>EMAIL</small>
+              <strong>gaurav.kumar.mail1109@gmail.com</strong>
+            </span>
+          </a>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>
+              <small>LOCATION</small>
+              <strong>Patna, Bihar, India</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-green" href="https://wa.me/919709461672?text=Hi%20THE%20TECH%20HUB%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+          <a class="btn btn-outline" href="mailto:gaurav.kumar.mail1109@gmail.com">
+            <i class="fa-solid fa-paper-plane"></i> Send an Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- MOBILE BOTTOM NAVIGATION -->
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="#home" data-page="home" class="active">
+    <i class="fa-solid fa-house"></i>
+    <span>Home</span>
+  </a>
+  <a href="#services" data-page="services">
+    <i class="fa-solid fa-screwdriver-wrench"></i>
+    <span>Services</span>
+  </a>
+  <a href="#projects" data-page="projects">
+    <i class="fa-solid fa-folder-open"></i>
+    <span>Projects</span>
+  </a>
+  <a href="#contact" data-page="contact">
+    <i class="fa-solid fa-message"></i>
+    <span>Contact</span>
+  </a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-
-    <div class="hero-tag">
-      <i class="fa-solid fa-circle"></i>
-      DIGITAL SOLUTIONS • BUILT IN INDIA
-    </div>
-
-    <h1 class="h1">
-      WE BUILD<br>
-      <span>DIGITAL</span><br>
-      EXPERIENCES.
-    </h1>
-
-    <p class="hero-p">
-      THE TECH HUB is a technology company based in Patna, Bihar.
-      We create websites, apps and custom software that help businesses
-      and communities bring their ideas to life.
-    </p>
-
-    <div class="btns">
-      <a href="#services" class="btn-primary">
-        Explore Services
-        <i class="fa-solid fa-arrow-right"></i>
-      </a>
-
-      <a href="https://wa.me/919709461672"
-         class="btn-sec"
-         target="_blank"
-         rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i>
-        Contact on WhatsApp
-      </a>
-    </div>
-
-    <div class="hero-note">
-      <i class="fa-solid fa-location-dot"></i>
-      Patna, Bihar, India
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="section-wrap">
-
-    <div class="section-heading">
-      <div class="eyebrow">WHAT WE DO</div>
-      <h2 class="sec-title">OUR SERVICES</h2>
-      <p class="sec-desc">
-        From an idea to a working digital product, we help you build
-        the tools and experiences your project needs.
-      </p>
-    </div>
-
-    <div class="services-grid">
-
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fa-solid fa-globe"></i>
-        </div>
-        <h3>Business Websites</h3>
-        <p>
-          Professional, responsive websites that introduce your business,
-          showcase your work and help customers connect with you.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fa-brands fa-android"></i>
-        </div>
-        <h3>Android Apps</h3>
-        <p>
-          Mobile app experiences designed around your users, services
-          and business requirements.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-        <h3>E-commerce Websites</h3>
-        <p>
-          Online stores with product displays, shopping flows and
-          features tailored to your selling needs.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fa-solid fa-laptop-code"></i>
-        </div>
-        <h3>Web Applications</h3>
-        <p>
-          Interactive web-based platforms built to support workflows,
-          communities and digital services.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fa-solid fa-table-columns"></i>
-        </div>
-        <h3>Custom Software &amp; Dashboards</h3>
-        <p>
-          Custom tools, admin panels and dashboards to organize
-          information and manage day-to-day operations.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fa-solid fa-pen-ruler"></i>
-        </div>
-        <h3>UI/UX Design</h3>
-        <p>
-          Clean interfaces and thoughtful user journeys that make
-          digital products easier to understand and use.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fa-solid fa-layer-group"></i>
-        </div>
-        <h3>Other Digital Services</h3>
-        <p>
-          Have a different digital requirement? Tell us about your idea
-          and we can discuss the right approach for your project.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section class="products" id="products">
-  <div class="section-wrap">
-
-    <div class="section-heading">
-      <div class="eyebrow">BUILT BY US</div>
-      <h2 class="sec-title">OUR PRODUCTS</h2>
-      <p class="sec-desc">
-        Our own digital platforms, built for learners and gaming communities.
-      </p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="product-icon blue">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-
-        <div class="product-label">Learning platform</div>
-        <h3>NEXT GEN</h3>
-
-        <p>
-          A learning platform for IIT Madras BS students, with study
-          resources, notes, previous year questions, videos and other
-          learning tools.
-        </p>
-
-        <a class="visit"
-           href="https://iitm-solutions.vercel.app/"
-           target="_blank"
-           rel="noopener">
-          Visit Website
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </div>
-
-      <div class="card">
-        <div class="product-icon red">
-          <i class="fa-solid fa-gamepad"></i>
-        </div>
-
-        <div class="product-label">Gaming &amp; esports</div>
-        <h3>FF LEAGUE</h3>
-
-        <p>
-          A Free Fire esports platform featuring tournaments,
-          cash prizes, wallet features and a leaderboard system
-          for gamers.
-        </p>
-
-        <a class="visit"
-           href="https://gk2391888-cmd.github.io/ff-leauge-final/"
-           target="_blank"
-           rel="noopener">
-          Play Now
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-box">
-
-    <div class="eyebrow">LET'S BUILD SOMETHING</div>
-
-    <h2>
-      HAVE A PROJECT<br>
-      IN MIND?
-    </h2>
-
-    <p>
-      Need a website, app or custom software for your business?
-      Share your idea with us. Let's discuss what we can build together.
-    </p>
-
-    <div class="contact-actions">
-
-      <a class="btn-primary btn-whatsapp"
-         href="https://wa.me/919709461672?text=Hi%20THE%20TECH%20HUB%2C%20I%20want%20to%20discuss%20a%20project."
-         target="_blank"
-         rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i>
-        Chat on WhatsApp
-      </a>
-
-      <a class="btn-sec"
-         href="mailto:gaurav.kumar.mail1109@gmail.com?subject=Project%20Enquiry%20-%20THE%20TECH%20HUB">
-        <i class="fa-solid fa-envelope"></i>
-        Send an Email
-      </a>
-
-    </div>
-
-    <div class="contact-details">
-      <a href="mailto:gaurav.kumar.mail1109@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-        gaurav.kumar.mail1109@gmail.com
-      </a>
-
-      <a href="https://wa.me/919709461672"
-         target="_blank"
-         rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i>
-        +91 97094 61672
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <div class="footer-main">
-
+  <div class="footer-inner">
     <div>
-      <div class="footer-brand">
+      <div class="brand">
         <img src="logo-192.png" alt="THE TECH HUB logo">
         THE TECH <span>HUB.</span>
       </div>
-
       <p class="footer-about">
         Built from Bihar for Bharat. THE TECH HUB creates useful
         digital products and software solutions for businesses,
         students and communities.
       </p>
-
       <div class="socials">
-        <a href="mailto:gaurav.kumar.mail1109@gmail.com"
-           title="Email">
+        <a href="mailto:gaurav.kumar.mail1109@gmail.com" aria-label="Email">
           <i class="fa-solid fa-envelope"></i>
         </a>
-
-        <a href="https://instagram.com/thetechhub_india"
-           target="_blank"
-           rel="noopener"
-           title="Instagram">
+        <a href="https://instagram.com/thetechhub_india" target="_blank" rel="noopener" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
-
-        <a href="https://www.linkedin.com/in/gaurav-kumar-a6923a437/"
-           target="_blank"
-           rel="noopener"
-           title="LinkedIn">
+        <a href="https://www.linkedin.com/in/gaurav-kumar-a6923a437/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
-
-        <a href="https://github.com/gk2391888-cmd"
-           target="_blank"
-           rel="noopener"
-           title="GitHub">
+        <a href="https://github.com/gk2391888-cmd" target="_blank" rel="noopener" aria-label="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
     </div>
 
     <div class="footer-links">
-      <div class="footer-heading">EXPLORE</div>
-      <div><a href="#">Home</a></div>
+      <h4>QUICK LINKS</h4>
+      <div><a href="#home">Home</a></div>
       <div><a href="#services">Services</a></div>
-      <div><a href="#products">Our Products</a></div>
-      <div><a href="#contact">Contact Us</a></div>
+      <div><a href="#projects">Our Projects</a></div>
+      <div><a href="#contact">Contact</a></div>
     </div>
 
     <div class="footer-links">
-      <div class="footer-heading">CONTACT</div>
-
-      <div>
-        <i class="fa-solid fa-envelope"></i>
-        <a href="mailto:gaurav.kumar.mail1109@gmail.com">
-          Email Us
-        </a>
-      </div>
-
-      <div>
-        <i class="fa-brands fa-whatsapp"></i>
-        <a href="https://wa.me/919709461672"
-           target="_blank"
-           rel="noopener">
-          WhatsApp
-        </a>
-      </div>
-
-      <div>
-        <i class="fa-solid fa-location-dot"></i>
-        Patna, Bihar, India
-      </div>
+      <h4>CONTACT</h4>
+      <div><a href="mailto:gaurav.kumar.mail1109@gmail.com">Email Us</a></div>
+      <div><a href="https://wa.me/919709461672">WhatsApp</a></div>
+      <div>Patna, Bihar, India</div>
     </div>
-
   </div>
 
-  <div class="footer-bottom">
-    <div>
-      <strong>
-        A Product of <span class="red">THE TECH HUB</span>
-      </strong>
-    </div>
-
-    <div>
-      MSME Registered:
-      <strong>UDYAM-BR-19-0017611</strong>
-      | Owned by GAURAV KUMAR
-    </div>
-
-    <div style="margin-top:9px">
-      © 2026 THE TECH HUB • Built in Patna • All Rights Reserved
-    </div>
+  <div class="legal">
+    <div><strong>A Product of <span class="red">THE TECH HUB</span></strong></div>
+    <div>MSME Registered: <strong>UDYAM-BR-19-0017611</strong> | Owned by GAURAV KUMAR</div>
+    <div>© 2026 THE TECH HUB • Built in Patna • All Rights Reserved</div>
   </div>
 </footer>
+
+<script>
+(function(){
+  const pages = ["home","services","projects","contact"];
+
+  function showPage(){
+    let current = location.hash.replace("#","").toLowerCase();
+    if(!pages.includes(current)) current = "home";
+
+    document.querySelectorAll(".page").forEach(page=>{
+      page.classList.remove("active");
+    });
+
+    const selected = document.getElementById("page-" + current);
+    if(selected) selected.classList.add("active");
+
+    document.querySelectorAll("[data-page]").forEach(link=>{
+      const isActive = link.dataset.page === current;
+      link.classList.toggle("active",isActive);
+      if(isActive) link.setAttribute("aria-current","page");
+      else link.removeAttribute("aria-current");
+    });
+
+    window.scrollTo(0,0);
+    document.title = current === "home"
+      ? "THE TECH HUB | Digital Solutions"
+      : current.charAt(0).toUpperCase() + current.slice(1) + " | THE TECH HUB";
+  }
+
+  window.addEventListener("hashchange",showPage);
+  window.addEventListener("DOMContentLoaded",showPage);
+  showPage();
+})();
+</script>
 
 </body>
 </html>
