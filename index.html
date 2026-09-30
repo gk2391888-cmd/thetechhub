@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>THE TECH HUB | Digital Solutions</title>
 <meta name="description" content="THE TECH HUB builds websites, Android apps, e-commerce websites and custom software in Patna, Bihar.">
 <meta name="theme-color" content="#060912">
@@ -505,6 +505,72 @@ footer{
   .hero-title{font-size:41px;letter-spacing:-2px}
   .page-title{font-size:30px}
 }
+
+/* PROFESSIONAL REFINEMENT */
+:root{--red:#e11d2d;--bg:#070912;--panel:#101426;--muted:#a6aec0;--line:#ffffff14}
+body{background:var(--bg);letter-spacing:.05px}
+.topbar{padding-inline:max(5%,calc((100% - 1200px)/2));box-shadow:0 8px 30px #0003}
+.brand{letter-spacing:-.45px}
+.desktop-nav{gap:30px}
+.nav-link{font-size:13px;letter-spacing:.2px}
+.top-contact{padding:12px 18px;border-radius:999px;box-shadow:0 8px 24px #e11d2d2b}
+.wrap{max-width:1160px}
+.home-hero{position:relative;overflow:hidden;min-height:calc(100vh - 70px)}
+.home-hero:after{content:"";position:absolute;right:-110px;top:12%;width:420px;height:420px;border:1px solid #ffffff0d;border-radius:50%;box-shadow:0 0 0 55px #ffffff04,0 0 0 110px #ffffff03;pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:790px}
+.hero-badge{border-color:#ffffff24;background:#ffffff0b;backdrop-filter:blur(10px)}
+.hero-title{font-size:clamp(54px,7.7vw,96px);line-height:1.02;letter-spacing:-4.8px}
+.hero-text{font-size:16px;max-width:590px;color:#b1b8c8}
+.btn{min-height:50px;padding:14px 21px;border-radius:999px}
+.btn-light{box-shadow:0 10px 28px #fff2}
+.btn-outline{border-color:#ffffff2b}
+.btn:focus-visible,.nav-link:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.home-products{position:relative;border-top:1px solid #ffffff0b;background:linear-gradient(180deg,#090d19,#070912)}
+.home-products .page-title{font-size:clamp(30px,3vw,40px)!important}
+.cards{gap:20px}
+.card{border-radius:20px;background:linear-gradient(145deg,#12182d,#0c1020);box-shadow:0 14px 40px #0002}
+.card:hover{transform:translateY(-5px);border-color:#e11d2d66;box-shadow:0 20px 48px #0005}
+.product-card{padding:30px}
+.product-card h3{letter-spacing:-.8px}
+.visit{border:1px solid #ffffff12;border-radius:999px;padding:12px 16px}
+.page-head{padding-top:72px}
+.page-title{letter-spacing:-2px}
+.page-subtitle{font-size:15px}
+.contact-panel{background:linear-gradient(145deg,#111629,#0b0f1e);box-shadow:0 20px 60px #0003}
+.contact-item{transition:.2s}
+.contact-item:hover{border-color:#e11d2d66;background:#ffffff09}
+footer{padding-top:45px}
+.footer-inner{max-width:1160px}
+.legal{max-width:1160px}
+@media(min-width:1200px){
+ .home-hero{padding:85px 0}
+ .hero-content{max-width:850px}
+ .hero-text{font-size:17px}
+}
+@media(max-width:900px){
+ .desktop-nav{gap:15px}
+ .nav-link{font-size:12px}
+ .top-contact{padding:10px 13px}
+}
+@media(max-width:650px){
+ .topbar{height:62px;padding:0 5%}
+ main{padding-top:62px;padding-bottom:78px}
+ .page{min-height:calc(100vh - 140px)}
+ .home-hero{min-height:calc(82vh - 62px);padding:45px 0 52px}
+ .home-hero:after{width:230px;height:230px;right:-135px;top:7%}
+ .hero-title{font-size:clamp(43px,12vw,61px);letter-spacing:-2.7px;line-height:1.03}
+ .hero-text{font-size:13px;max-width:100%}
+ .btn{border-radius:13px}
+ .home-products{padding:43px 0 48px}
+ .page-head{padding:46px 0 27px}
+ .page-title{letter-spacing:-1.2px}
+ .contact-panel{box-shadow:none}
+ .mobile-nav{min-height:72px;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+
 </style>
 </head>
 
